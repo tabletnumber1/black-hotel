@@ -1,0 +1,316 @@
+ 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0f0f0f;
+            color: #e5e5e5;
+            line-height: 1.6;
+        }
+
+        /* Обкладинка з затемненням та атмосферою ресторану */
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(15, 15, 15, 1)), 
+                        url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600') no-repeat center/cover;
+            padding: 120px 20px 80px;
+            text-align: center;
+            border-bottom: 1px solid #222;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            color: #fff;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #c5a880; /* Золотий акцент готелю */
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        /* Опис закладу */
+        .about {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .about h2 {
+            color: #fff;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .about h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 2px;
+            background-color: #c5a880;
+            margin: 10px auto 0;
+        }
+
+        .about p {
+            color: #a0a0a0;
+            font-size: 1.1rem;
+        }
+
+        /* Секція ресторанного меню */
+        .menu-section {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .menu-title {
+            text-align: center;
+            color: #fff;
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+        }
+
+        .menu-grid {
+            display: table;
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 20px;
+        }
+
+        .menu-row {
+            display: table-row;
+        }
+
+        .menu-item {
+            display: table-cell;
+            width: 50%;
+            background-color: #161616;
+            border: 1px solid #252525;
+            border-radius: 8px;
+            padding: 25px;
+            vertical-align: top;
+            transition: border-color 0.3s;
+        }
+
+        .menu-item:hover {
+            border-color: #c5a880;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 10px;
+            border-bottom: 1px dashed #333;
+            padding-bottom: 5px;
+        }
+
+        .item-title {
+            color: #fff;
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+
+        .item-price {
+            color: #c5a880;
+            font-size: 1.25rem;
+            font-weight: bold;
+            white-space: nowrap;
+            padding-left: 10px;
+        }
+
+        .item-desc {
+            color: #888;
+            font-size: 0.95rem;
+        }
+
+        /* Форма замовлення столика */
+        .reservation {
+            max-width: 550px;
+            margin: 80px auto;
+            padding: 45px 30px;
+            background-color: #161616;
+            border: 1px solid #252525;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .reservation h2 {
+            color: #fff;
+            margin-bottom: 15px;
+            font-size: 2rem;
+        }
+
+        .reservation p {
+            color: #a0a0a0;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            color: #c5a880;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .reservation input, .reservation select {
+            width: 100%;
+            padding: 14px;
+            background-color: #222;
+            border: 1px solid #333;
+            color: #fff;
+            border-radius: 4px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .reservation input:focus, .reservation select:focus {
+            border-color: #c5a880;
+        }
+
+        button {
+            width: 100%;
+            background-color: #c5a880;
+            color: #0f0f0f;
+            border: none;
+            padding: 15px;
+            font-size: 1.05rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #b39368;
+        }
+
+        footer {
+            background-color: #070707;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid #222;
+        }
+
+        footer p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Адаптивність для смартфонів */
+        @media (max-width: 768px) {
+            .menu-item {
+                display: block;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .menu-row {
+                display: block;
+            }
+            header h1 {
+                font-size: 2.5rem;
+            }
+        }
+        /* Фіксована навігаційна панель */
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(11, 11, 11, 0.85); /* Напівпрозорий чорний */
+    backdrop-filter: blur(10px); /* Ефект розмиття скла */
+    border-bottom: 1px solid #2a2a2a;
+    padding: 15px 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-nav .logo {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #a0a0a0;
+    text-decoration: none;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #c5a880; /* Золотий при наведенні */
+}
+
+/* Кнопка швидкого бронювання в меню */
+.nav-links .nav-btn {
+    background-color: #c5a880;
+    color: #121212;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links .nav-btn:hover {
+    background-color: #b39368;
+    color: #121212;
+}
+
+/* Зміщення для шапки, щоб її не перекривало меню */
+header {
+    padding-top: 140px !important; 
+}
+
+/* Адаптивність меню для мобільних */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 15px;
+    }
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+    .nav-links .nav-btn {
+        padding: 6px 12px;
+    }
+}

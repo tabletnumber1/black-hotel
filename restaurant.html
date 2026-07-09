@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <nav class="main-nav">
+    <div class="nav-container">
+        <a href="index.html" class="logo">🏨 Black Hotel</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="index.html#rooms">Номери</a></li>
+            <li><a href="restaurant.html">Ресторан</a></li>
+            <li><a href="index.html#booking" class="nav-btn">Бронювання</a></li>
+        </ul>
+    </div>
+</nav> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Restaurant | Black Hotel</title>
+    <link rel="stylesheet" href="stylm.css">>
+</head>
+<body>
+
+<header>
+    <h1>BLACK RESTAURANT</h1>
+    <p>Вишукане продовження вашого відпочинку</p>
+</header>
+
+<section class="about">
+    <h2>Про ресторан</h2>
+    <p>Ресторан при Black Hotel поєднує в собі камерну атмосферу, авторську кухню від шефа та бездоганний сервіс. Ми створюємо гастрономічні шедеври, які ідеально доповнюють концепцію вишуканого темного стилю готелю.</p>
+</section>
+
+<section class="menu-section">
+    <h2 class="menu-title">Основне Меню</h2>
+    
+    <div class="menu-grid">
+        <div class="menu-row">
+            <div class="menu-item">
+                <div class="item-header">
+                    <span class="item-title">Стейк Рібай з трюфельним соусом</span>
+                    <span class="item-price">680 грн</span>
+                </div>
+                <p class="item-desc">Преміальна яловичина сухого визрівання, приготована на вугіллі, з ароматним соусом на основі чорного трюфеля.</p>
+            </div>
+            <div class="menu-item">
+                <div class="item-header">
+                    <span class="item-title">Салат з качиною грудкою та інжиром</span>
+                    <span class="item-price">340 грн</span>
+                </div>
+                <p class="item-desc">Ніжне філе качки, мікс салатів, свіжий інжир, карамелізовані горіхи та бальзамічний крем.</p>
+            </div>
+        </div>
+        
+        <div class="menu-row">
+            <div class="menu-item">
+                <div class="item-header">
+                    <span class="item-title">Чорне ризото з морепродуктами</span>
+                    <span class="item-price">450 грн</span>
+                </div>
+                <p class="item-desc">Ризото з чорнилом каракатиці, тигровими креветками, морськими гребінцями та пармезаном.</p>
+            </div>
+            <div class="menu-item">
+                <div class="item-header">
+                    <span class="item-title">Шоколадний фондан з лавандовим морозивом</span>
+                    <span class="item-price">210 грн</span>
+                </div>
+                <p class="item-desc">Теплий десерт з рідкою шоколадною серцевиною та крафтовою кулькою лавандового морозива.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="reservation">
+    <h2>Замовити столик</h2>
+    <p>Для гостей готелю діє пріоритетне бронювання</p>
+    
+    <form id="resForm" onsubmit="event.preventDefault(); alert('Дякуємо! Ваш столик успішно заброньовано. Очікуйте підтвердження менеджера.');">
+        <div class="form-group">
+            <label for="guest-name">Ваше Ім'я</label>
+            <input type="text" id="guest-name" required placeholder="Олександр">
+        </div>
+        
+        <div class="form-group">
+            <label for="room-num">Номер кімнати в готелі (якщо проживаєте)</label>
+            <input type="text" id="room-num" placeholder="Наприклад, 142">
+        </div>
+        
+        <div class="form-group">
+            <label for="res-time">Час та Дата</label>
+            <input type="datetime-local" id="res-time" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="guests">Кількість гостей</label>
+            <select id="guests">
+                <option>1 особа</option>
+                <option selected>2 особи</option>
+                <option>3-4 особи</option>
+                <option>Більше 4 осіб</option>
+            </select>
+        </div>
+        
+        <button type="submit">Підтвердити бронювання</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 Black Hotel & Restaurant. Усі права захищено.</p>
+</footer>
+
+</body>
+</html>

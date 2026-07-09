@@ -1,0 +1,259 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(18, 18, 18, 1)), 
+                url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1600') no-repeat center/cover;
+    padding: 100px 20px 60px;
+    text-align: center;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #fff;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #c5a880; 
+    font-weight: 300;
+}
+
+
+.rooms {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.room {
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.room:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    border-color: #c5a880;
+}
+
+.room img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    filter: brightness(0.9);
+}
+
+.room-info {
+    padding: 25px;
+}
+
+.room-info h2 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.room-info p {
+    color: #a0a0a0;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.room-info .price {
+    font-size: 1.3rem;
+    color: #c5a880;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+button {
+    width: 100%;
+    background-color: #c5a880;
+    color: #121212;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #b39368;
+}
+
+.booking {
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 40px 20px;
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.booking h2 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+.booking input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    background-color: #262626;
+    border: 1px solid #3a3a3a;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.booking input:focus {
+    border-color: #c5a880;
+}
+
+.booking input[readonly] {
+    background-color: #1f1f1f;
+    color: #c5a880;
+    font-weight: bold;
+}
+
+
+footer {
+    background-color: #0b0b0b;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid #2a2a2a;
+    margin-top: 80px;
+}
+
+footer h2 {
+    color: #fff;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #a0a0a0;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+    .rooms {
+        margin: 30px auto;
+    }
+}
+
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(11, 11, 11, 0.85); 
+    backdrop-filter: blur(10px); 
+    border-bottom: 1px solid #2a2a2a;
+    padding: 15px 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-nav .logo {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #a0a0a0;
+    text-decoration: none;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #c5a880; 
+}
+
+
+.nav-links .nav-btn {
+    background-color: #c5a880;
+    color: #121212;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links .nav-btn:hover {
+    background-color: #b39368;
+    color: #121212;
+}
+
+
+header {
+    padding-top: 140px !important; 
+}
+
+
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 15px;
+    }
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+    .nav-links .nav-btn {
+        padding: 6px 12px;
+    }
+}
