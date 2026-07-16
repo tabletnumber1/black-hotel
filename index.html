@@ -1,155 +1,124 @@
 <!DOCTYPE html>
-
 <html lang="uk">
-
 <head>
-<nav class="main-nav">
-    <div class="nav-container">
-        <a href="index.html" class="logo">🏨 Black Hotel</a>
-        <ul class="nav-links">
-            <li><a href="index.html">Головна</a></li>
-            
-            <li><a href="restaurant.html">Ресторан</a></li>
-            <li><a href="index.html#booking" class="nav-btn">Бронювання</a></li>
-        </ul>
-    </div>
-</nav>
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Black Hotel</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Hotel</title>
+    <!-- Підключаємо зовнішній CSS-файл -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
+    <!-- Навігаційна панель -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">🏨 Black Hotel</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="restaurant.html">Ресторан</a></li>
+                <li><a href="#booking" class="nav-btn">Бронювання</a></li>
+            </ul>
+        </div>
+    </nav>
 
+    <!-- Шапка сайту -->
+    <header>
+        <h1>🏨 Black Hotel</h1>
+        <p>Люкс комфорт у темному стилі</p>
+    </header>
 
-<header>
+    <!-- Список Номерів -->
+    <section class="rooms">
+        
 
-<h1>🏨 Black Hotel</h1>
+        <!-- Номер 1: Стандарт -->
+        <div class="room">
+            <div class="room-img-container">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600" alt="Стандарт">
+            </div>
+            <div class="room-info">
+                <h2>Стандарт</h2>
+                <p>Затишний одномісний номер від 1-100</p>
+                <p class="price">1000 грн/ніч</p>
+                <button onclick="bookRoom('Стандарт')">Забронювати</button>
+            </div>
+        </div>
 
-<p>Люкс комфорт у темному стилі</p>
+        <!-- Номер 2: Комфорт -->
+        <div class="room">
+            <div class="room-img-container">
+                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600" alt="Комфорт">
+            </div>
+            <div class="room-info">
+                <h2>Комфорт</h2>
+                <p>Двомісний номер підвищеного класу 100-200</p>
+                <p class="price">1800 грн/ніч</p>
+                <button onclick="bookRoom('Комфорт')">Забронювати</button>
+            </div>
+        </div>
 
-</header>
+        <!-- Номер 3: Люкс -->
+        <div class="room">
+            <div class="room-img-container">
+                <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=600" alt="Люкс">
+            </div>
+            <div class="room-info">
+                <h2>Люкс</h2>
+                <p>Преміум номер з панорамним видом 200-250</p>
+                <p class="price">3500 грн/ніч</p>
+                <button onclick="bookRoom('Люкс')">Забронювати</button>
+            </div>
+        </div>
 
+        <!-- Номер 4: VIP Люкс -->
+        <div class="room">
+            <div class="room-img-container">
+                <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=600" alt="VIP Люкс">
+            </div>
+            <div class="room-info">
+                <h2>VIP Люкс</h2>
+                <p>Королівські апартаменти з терасою та власним джакузі 250-260</p>
+                <p class="price">7500 грн/ніч</p>
+                <button onclick="bookRoom('VIP Люкс')">Забронювати</button>
+            </div>
+        </div>
+        <script>
+</script>
 
+    </section>
 
-<section class="rooms">
+    <!-- Секція СПА -->
+    <section class="spa-section">
+        <div class="spa-info">
+            <h2>✨ Релакс у Black SPA</h2>
+            <p>Дозвольте собі повністю розслабитися в нашому ексклюзивному SPA-салоні. Для гостей Black Hotel доступні фінська сауна, хамам, басейн з підігрівом та професійний масаж. Відновіть сили після насиченого дня в атмосфері абсолютного спокою та затишку.</p>
+        </div>
+        <div class="spa-image"></div>
+    </section>
 
-
-
-<div class="room">
-
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600" alt="Стандарт">
-
-
-
-<div class="room-info">
-
-<h2>Стандарт</h2>
-
-<p>Затишний одномісні номери від 1-100</p>
-
-<p class="price">1000 грн/ніч</p>
-
-<button onclick="bookRoom('Стандарт')">Забронювати</button>
-
-</div>
-
-</div>
-
-
-
-<div class="room">
-
-<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600" alt="Комфорт">
-
-
-
-<div class="room-info">
-
-<h2>Комфорт</h2>
-
-<p>Двомісний номер підвищеного класу 100-200номери</p>
-
-<p class="price">1800 грн/ніч</p>
-
-<button onclick="bookRoom('Комфорт')">Забронювати</button>
-
-</div>
-
-</div>
-
-
-
-<div class="room">
-
-<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=600" alt="Люкс">
-
-
-
-<div class="room-info">
-
-<h2>Люкс</h2>
-
-<p>Преміум номер з панорамним видом 200-250номерів</p>
-
-<p class="price">3500 грн/ніч</p>
-
-<button onclick="bookRoom('Люкс')">Забронювати</button>
-
-</div>
-
-</div>
-
-
-
+<section class="booking" id="booking-section">
+    <h2>Забронювати номер</h2>
+    <form id="booking-form">
+        
+        <!-- Поле для імені клієнта -->
+        <input type="text" id="guest-name" placeholder="Ваше ім'я" required>
+        
+        <!-- Поле для введення ТЕЛЕФОНУ (тепер працює без проблем!) -->
+        <input type="tel" id="guest-phone" placeholder="Ваш номер телефону (+380...)" required>
+        
+        <!-- Кнопка відправки -->
+        <button type="submit">Підтвердити бронювання</button>
+    </form>
 </section>
 
+    <!-- Контакти -->
+    <footer>
+        <h2>Контакти</h2>
+        <p>📍 Львів, вул. Центральна 10</p>
+        <p>📞 +380 67 123 45 67</p>
+        <p>✉ blackhotel@gmail.com</p>
+    </footer>
 
-
-<section class="booking">
-
-<h2>Бронювання</h2>
-
-
-
-<input type="text" id="name" placeholder="Ваше ім'я">
-
-<input type="text" id="selectedRoom" placeholder="Обраний номер" readonly>
-
-<input type="date" id="date">
-
-
-
-<button onclick="confirmBooking()">Підтвердити</button>
-
-</section>
-
-
-
-<footer>
-
-<h2>Контакти</h2>
-
-<p>📍 Львів, вул. Центральна 10</p>
-
-<p>📞 +380 67 123 45 67</p>
-
-<p>✉ blackhotel@gmail.com</p>
-
-</footer>
-
-
-
-<script src="script.js"></script>
-
-
-
+    <script src="script.js"></script>
 </body>
-
 </html>

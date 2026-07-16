@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <nav class="main-nav">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Restaurant | Black Hotel</title>
+    <link rel="stylesheet" href="stylm.css">
+</head>
+<body>
+
+<nav class="main-nav">
     <div class="nav-container">
         <a href="index.html" class="logo">🏨 Black Hotel</a>
         <ul class="nav-links">
             <li><a href="index.html">Головна</a></li>
             <li><a href="index.html#rooms">Номери</a></li>
-            <li><a href="restaurant.html">Ресторан</a></li>
-            <li><a href="index.html#booking" class="nav-btn">Бронювання</a></li>
         </ul>
     </div>
 </nav> 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Black Restaurant | Black Hotel</title>
-    <link rel="stylesheet" href="stylm.css">>
-</head>
-<body>
 
 <header>
     <h1>BLACK RESTAURANT</h1>
@@ -25,82 +24,279 @@
 </header>
 
 <section class="about">
-    <h2>Про ресторан</h2>
-    <p>Ресторан при Black Hotel поєднує в собі камерну атмосферу, авторську кухню від шефа та бездоганний сервіс. Ми створюємо гастрономічні шедеври, які ідеально доповнюють концепцію вишуканого темного стилю готелю.</p>
-</section>
-
-<section class="menu-section">
-    <h2 class="menu-title">Основне Меню</h2>
-    
-    <div class="menu-grid">
-        <div class="menu-row">
-            <div class="menu-item">
-                <div class="item-header">
-                    <span class="item-title">Стейк Рібай з трюфельним соусом</span>
-                    <span class="item-price">680 грн</span>
-                </div>
-                <p class="item-desc">Преміальна яловичина сухого визрівання, приготована на вугіллі, з ароматним соусом на основі чорного трюфеля.</p>
-            </div>
-            <div class="menu-item">
-                <div class="item-header">
-                    <span class="item-title">Салат з качиною грудкою та інжиром</span>
-                    <span class="item-price">340 грн</span>
-                </div>
-                <p class="item-desc">Ніжне філе качки, мікс салатів, свіжий інжир, карамелізовані горіхи та бальзамічний крем.</p>
-            </div>
-        </div>
-        
-        <div class="menu-row">
-            <div class="menu-item">
-                <div class="item-header">
-                    <span class="item-title">Чорне ризото з морепродуктами</span>
-                    <span class="item-price">450 грн</span>
-                </div>
-                <p class="item-desc">Ризото з чорнилом каракатиці, тигровими креветками, морськими гребінцями та пармезаном.</p>
-            </div>
-            <div class="menu-item">
-                <div class="item-header">
-                    <span class="item-title">Шоколадний фондан з лавандовим морозивом</span>
-                    <span class="item-price">210 грн</span>
-                </div>
-                <p class="item-desc">Теплий десерт з рідкою шоколадною серцевиною та крафтовою кулькою лавандового морозива.</p>
-            </div>
-        </div>
+    <div class="about-content">
+        <h2>Про ресторан</h2>
+        <p>Ресторан при Black Hotel поєднує в собі камерну атмосферу, авторську кухню від шефа та бездоганний сервіс. Ми створюємо гастрономічні шедеври, які ідеально доповнюють концепцію вишуканого темного стилю готелю.</p>
     </div>
 </section>
 
-<section class="reservation">
-    <h2>Замовити столик</h2>
-    <p>Для гостей готелю діє пріоритетне бронювання</p>
-    
-    <form id="resForm" onsubmit="event.preventDefault(); alert('Дякуємо! Ваш столик успішно заброньовано. Очікуйте підтвердження менеджера.');">
-        <div class="form-group">
-            <label for="guest-name">Ваше Ім'я</label>
-            <input type="text" id="guest-name" required placeholder="Олександр">
+<!-- МЕНЮ РЕСТОРАНУ -->
+<section class="menu-section">
+    <h2 class="menu-main-title">НАШЕ МЕНЮ</h2>
+
+    <!-- 1. ХОЛОДНІ СТРАВИ -->
+    <div class="menu-category">
+        <h3 class="category-title">Холодні страви</h3>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="tartar-z-yalovychyny_sitewebukr-1000x600.jpg" alt="Тартар з яловичини" class="item-thumb">
+                <div class="item-header">
+                    <span class="item-title">Тартар з яловичини</span>
+                    <span class="item-price">320 грн</span>
+                </div>
+                <p class="item-desc">Ніжна вирізка, каперси, в'ялені томати, повітряний мус із пармезану.</p>
+            </div>
+            
+            <div class="menu-item">
+                <img src="a40133ffb5fb912fa54f620f7c2d8a42_1696327586.jpeg" alt="Салат з качкою" class="item-thumb">
+                <div class="item-header">
+                    <span class="item-title">Салат з качиною грудкою</span>
+                    <span class="item-price">340 грн</span>
+                </div>
+                <p class="item-desc">Філе качки, мікс салатів, свіжий інжир, карамелізовані горіхи, бальзамік.</p>
+            </div>
+
+            <div class="menu-item">
+                <img src="karpacho-iz-lososya-770x513.jpg" alt="Карпачо з лосося" class="item-thumb">
+                <div class="item-header">
+                    <span class="item-title">Карпачо з лосося</span>
+                    <span class="item-price">390 грн</span>
+                </div>
+                <p class="item-desc">Тонкі слайси лосося, каперси, рукола, оливкова олія, сік лимона.</p>
+            </div>
+
+            <div class="menu-item">
+                <img src="salat-z-buratoyu-img-1000x600.jpg" alt="Салат з буратою" class="item-thumb">
+                <div class="item-header">
+                    <span class="item-title">Бурата з томатами</span>
+                    <span class="item-price">310 грн</span>
+                </div>
+                <p class="item-desc">Вершковий сир бурата, стиглі томати чері, соус песто, базилік.</p>
+            </div>
+
+            <div class="menu-item">
+                <img src="35d2dcd5a6937bb4a17dd28f1a331ff9.jpg" alt="Паштет" class="item-thumb">
+                <div class="item-header">
+                    <span class="item-title">Паштет з качки на багеті</span>
+                    <span class="item-price">240 грн</span>
+                </div>
+                <p class="item-desc">Ніжний паштет з цибулевим конфітюром та хрусткими грінками багету.</p>
+            </div>
+
+            <div class="menu-item">
+                <img src="01930329-a10f-72d5-9194-3bbf01e076d7-826x0.png" alt="Устриці" class="item-thumb">
+                <div class="item-header">
+                    <span class="item-title">Свіжі устриці (3 шт.)</span>
+                    <span class="item-price">480 грн</span>
+                </div>
+                <p class="item-desc">Устриці Фін де Клер, подаються на льоду з лимоном та винним соусом.</p>
+            </div>
+
+            <div class="menu-item">
+                <img src="7266-1920x1281.webp" alt="Сирна тарілка" class="item-thumb">
+                <div class="item-header">
+                    <span class="item-title">Плато елітних сирів</span>
+                    <span class="item-price">420 грн</span>
+                </div>
+                <p class="item-desc">Пармезан, Дорблю, козячий сир, брі, подаються з медом та трюфельним горіхом.</p>
+            </div>
+
+                <p class="item-desc">Тонко нарізана запечена телятина під ніжним соусом із тунця та каперсів.</p>
+            </div>
         </div>
-        
-        <div class="form-group">
-            <label for="room-num">Номер кімнати в готелі (якщо проживаєте)</label>
-            <input type="text" id="room-num" placeholder="Наприклад, 142">
+    </div>
+
+    <!-- 2. ГАРЯЧІ СТРАВИ -->
+    <div class="menu-category">
+        <h3 class="category-title">Гарячі страви</h3>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="jason_leung_o67lzfeyybk_unsplash_1_2_1080x720.jpg" alt="Стейк Рібай" class="item-thumb">
+                <div class="item-header">
+                    <span class="item-title">Стейк Рібай</span>
+                    <span class="item-price">680 грн</span>
+                </div>
+                <p class="item-desc">Преміальна яловичина на вугіллі з ароматним трюфельним соусом.</p>
+            </div>
+
+            <div class="menu-item">
+                <img src="600x300.jpg" alt="Чорне ризото" class="item-thumb">
+                <div class="item-header">
+                    <span class="item-title">Чорне ризото</span>
+                    <span class="item-price">450 грн</span>
+                </div>
+                <p class="item-desc">Ризото з чорнилом каракатиці, тигровими креветками та пармезаном.</p>
+            </div>
+
+            <div class="menu-item">
+                <img src="1716378.jpg" alt="Лосось на грилі" class="item-thumb">
+                <div class="item-header">
+                    <span class="item-title">Лосось з аспарагусом</span>
+                    <span class="item-price">520 грн</span>
+                </div>
+                <p class="item-desc">Соковитий лосось су-від, спаржа, лимонно-вершковий соус.</p>
+            </div>
+
+            <div class="menu-item">
+                <img src="800_0_1615387932-9078.webp" alt="Паста" class="item-thumb">
+                <div class="item-header">
+                    <span class="item-title">Паста карбонара</span>
+                    <span class="item-price">380 грн</span>
+                </div>
+                <p class="item-desc">Домашня паста вершковий соус бекон та сирий жовток.</p>
+            </div>
+
+            <div class="menu-item">
+                <img src="photo_2022-07-30_20-44-31-1-1200x799.jpg" alt="Качина ніжка" class="item-thumb">
+                <div class="item-header">
+                    <span class="item-title">паста баланьєза</span>
+                    <span class="item-price">490 грн</span>
+                </div>
+                <p class="item-desc"></p>
+            </div>
+
+            <div class="menu-item">
+                <img src="image.webp" alt="Восьминіг" class="item-thumb">
+                <div class="item-header">
+                    <span class="item-title">Восьминіг на грилі</span>
+                    <span class="item-price">750_грн</span>
+                </div>
+                <p class="item-desc">Ніжний щупалець восьминога з бейбі-картоплею та соусом ромеско.</p>
+            </div>
+
+            <div class="menu-item">
+                <img src="800_0_1591273446-1395.webp" alt="Крем-суп" class="item-thumb">
+                <div class="item-header">
+                    <span class="item-title">Грибний крем-суп</span>
+                    <span class="item-price">220 грн</span>
+                </div>
+                <p class="item-desc">Ароматний суп-пюре з лісових грибів, вершків та трюфельної олії.</p>
+            </div>
+
+            <div class="menu-item">
+                <img src="shutterstock_611174102_2-1000x565.jpg" alt="Реберця" class="item-thumb">
+                <div class="item-header">
+                    <span class="item-title">Свинячі реберця BBQ</span>
+                    <span class="item-price">460_грн</span>
+                </div>
+                <p class="item-desc">Карамелізовані реберця в гостро-солодкому соусі BBQ з маринованою цибулею.</p>
+            </div>
         </div>
-        
-        <div class="form-group">
-            <label for="res-time">Час та Дата</label>
-            <input type="datetime-local" id="res-time" required>
+    </div>
+
+    <!-- 3. ДЕСЕРТИ -->
+    <div class="menu-category">
+        <h3 class="category-title">Десерти</h3>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="shutterstock_1188669673-2.avif" alt="Шоколадний фондан" class="item-thumb">
+                <div class="item-header">
+                    <span class="item-title">Шоколадний фондан</span>
+                    <span class="item-price">210 грн</span>
+                </div>
+                <p class="item-desc">Теплий фондан, рідка шоколадна серцевина, лавандове морозиво.</p>
+            </div>
+
+            <div class="menu-item">
+                <img src="1261775_1200x836x90_c.webp" alt="Чізкейк" class="item-thumb">
+                <div class="item-header">
+                    <span class="item-title">Баскський чізкейк</span>
+                    <span class="item-price">190_грн</span>
+                </div>
+                <p class="item-desc">Ніжний Сан-Себастьян із карамельною скоринкою та чорничним кюлі.</p>
+            </div>
+
+            <div class="menu-item">
+                <img src="Tiramisu.jpg" alt="Тірамісу" class="item-thumb">
+                <div class="item-header">
+                    <span class="item-title">Тірамісу Black</span>
+                    <span class="item-price">230 грн</span>
+                </div>
+                <p class="item-desc">Мус маскарпоне, савоярді з еспресо та кавовим лікером Kahlua.</p>
+            </div>
+
+            <div class="menu-item">
+                <img src="4834149358_w640_h320_makaronsy-nabor-4sht.webp" alt="Макарони" class="item-thumb">
+                <div class="item-header">
+                    <span class="item-title">Сет макаронів (4 шт.)</span>
+                    <span class="item-price">180 грн</span>
+                </div>
+                <p class="item-desc">Асорті смаків: солона карамель, фісташка, дорблю-груша та чорна смородина.</p>
+            </div>
+
+            <div class="menu-item">
+                <img src="desert-pana-kota__sitewebukrjpg-1000x600.jpg" alt="Панна Котта" class="item-thumb">
+                <div class="item-header">
+                    <span class="item-title">Кокосова Панна Котта</span>
+                    <span class="item-price">170 грн</span>
+                </div>
+                <p class="item-desc">Легкий десерт на кокосовому молоці з пюре зі свіжого манго та маракуї.</p>
+            </div>
+
+            <div class="menu-item">
+                <img src="hq720.jpg" alt="Лимонний тарт" class="item-thumb">
+                <div class="item-header">
+                    <span class="item-title">Лимонний тарт з меренгою</span>
+                    <span class="item-price">195 грн</span>
+                </div>
+                <p class="item-desc">Пісочна основа, кислий лимонний курд та ніжна обпалена італійська меренга.</p>
+            </div>
         </div>
-        
-        <div class="form-group">
-            <label for="guests">Кількість гостей</label>
-            <select id="guests">
-                <option>1 особа</option>
-                <option selected>2 особи</option>
-                <option>3-4 особи</option>
-                <option>Більше 4 осіб</option>
-            </select>
+    </div>
+
+    <!-- 4. НАПОЇ -->
+    <div class="menu-category">
+        <h3 class="category-title">Напої</h3>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="item-header">
+                    <span class="item-title">Коктейль "Black Velvet"</span>
+                    <span class="item-price">250 грн</span>
+                </div>
+                <p class="item-desc">Темний ром, ожиновий лікер, активоване вугілля, сік лайма.</p>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-header">
+                    <span class="item-title">Лимонад Лаванда-Чорниця</span>
+                    <span class="item-price">120 грн</span>
+                </div>
+                <p class="item-desc">Натуральне чорничне пюре, лавандовий сироп, содова, лід.</p>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-header">
+                    <span class="item-title">Флет Вайт</span>
+                    <span class="item-price">95 грн</span>
+                </div>
+                <p class="item-desc">Подвійне еспресо, гаряче кокосове молоко, легка пінка.</p>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-header">
+                    <span class="item-title">Односолодовий віскі 12р.</span>
+                    <span class="item-price">320_грн</span>
+                </div>
+                <p class="item-desc">Порція вишуканого шотландського віскі з легким торф'яним післясмаком.</p>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-header">
+                    <span class="item-title">Чай</span>
+                    <span class="item-price">110 грн</span>
+                </div>
+                <p class="item-desc">Японський зелений чай матча найвищого ґатунку на мигдалевому молоці.</p>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-header">
+                    <span class="item-title">Келих сухого червоного</span>
+                    <span class="item-price">190_грн</span>
+                </div>
+                <p class="item-desc">Преміальне червоне сухе вино врожаю тосканських виноградників.</p>
+            </div>
         </div>
-        
-        <button type="submit">Підтвердити бронювання</button>
-    </form>
+    </div>
 </section>
 
 <footer>

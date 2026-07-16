@@ -1,9 +1,15 @@
-
+/* ==========================================================================
+   1. Базові та глобальні стилі
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth; /* Забезпечує плавне переміщення при кліку на "Бронювання" */
 }
 
 body {
@@ -12,170 +18,9 @@ body {
     line-height: 1.6;
 }
 
-
-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(18, 18, 18, 1)), 
-                url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1600') no-repeat center/cover;
-    padding: 100px 20px 60px;
-    text-align: center;
-    border-bottom: 1px solid #2a2a2a;
-}
-
-header h1 {
-    font-size: 3rem;
-    color: #fff;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-}
-
-header p {
-    font-size: 1.2rem;
-    color: #c5a880; 
-    font-weight: 300;
-}
-
-
-.rooms {
-    max-width: 1200px;
-    margin: 60px auto;
-    padding: 0 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.room {
-    background-color: #1a1a1a;
-    border: 1px solid #2a2a2a;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.room:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    border-color: #c5a880;
-}
-
-.room img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    filter: brightness(0.9);
-}
-
-.room-info {
-    padding: 25px;
-}
-
-.room-info h2 {
-    font-size: 1.5rem;
-    color: #fff;
-    margin-bottom: 10px;
-}
-
-.room-info p {
-    color: #a0a0a0;
-    font-size: 0.95rem;
-    margin-bottom: 15px;
-}
-
-.room-info .price {
-    font-size: 1.3rem;
-    color: #c5a880;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-
-button {
-    width: 100%;
-    background-color: #c5a880;
-    color: #121212;
-    border: none;
-    padding: 12px;
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #b39368;
-}
-
-.booking {
-    max-width: 500px;
-    margin: 60px auto;
-    padding: 40px 20px;
-    background-color: #1a1a1a;
-    border: 1px solid #2a2a2a;
-    border-radius: 8px;
-    text-align: center;
-}
-
-.booking h2 {
-    color: #fff;
-    margin-bottom: 25px;
-    font-size: 1.8rem;
-}
-
-.booking input {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    background-color: #262626;
-    border: 1px solid #3a3a3a;
-    color: #fff;
-    border-radius: 4px;
-    font-size: 1rem;
-    outline: none;
-}
-
-.booking input:focus {
-    border-color: #c5a880;
-}
-
-.booking input[readonly] {
-    background-color: #1f1f1f;
-    color: #c5a880;
-    font-weight: bold;
-}
-
-
-footer {
-    background-color: #0b0b0b;
-    padding: 40px 20px;
-    text-align: center;
-    border-top: 1px solid #2a2a2a;
-    margin-top: 80px;
-}
-
-footer h2 {
-    color: #fff;
-    font-size: 1.4rem;
-    margin-bottom: 15px;
-}
-
-footer p {
-    color: #a0a0a0;
-    margin-bottom: 8px;
-    font-size: 0.95rem;
-}
-
-
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 2.2rem;
-    }
-    .rooms {
-        margin: 30px auto;
-    }
-}
-
+/* ==========================================================================
+   2. Фіксована навігаційна панель
+   ========================================================================== */
 .main-nav {
     position: fixed;
     top: 0;
@@ -225,7 +70,6 @@ footer p {
     color: #c5a880; 
 }
 
-
 .nav-links .nav-btn {
     background-color: #c5a880;
     color: #121212;
@@ -240,13 +84,269 @@ footer p {
     color: #121212;
 }
 
-
+/* ==========================================================================
+   3. Шапка сайту (Header)
+   ========================================================================== */
 header {
-    padding-top: 140px !important; 
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(18, 18, 18, 1)), 
+                url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1600') no-repeat center/cover;
+    padding: 100px 20px 60px;
+    text-align: center;
+    border-bottom: 1px solid #2a2a2a;
+    padding-top: 140px !important; /* Зміщення для шапки, щоб її не перекривало меню */
 }
 
+header h1 {
+    font-size: 3rem;
+    color: #fff;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
 
+header p {
+    font-size: 1.2rem;
+    color: #c5a880; 
+    font-weight: 300;
+}
+
+/* ==========================================================================
+   4. Кімнати та номери (Rooms)
+   ========================================================================== */
+.rooms {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Авто-підлаштування колонок */
+    gap: 30px;
+}
+
+.room {
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    animation: fadeInUp 0.8s ease forwards; /* Анімація появи карток */
+}
+
+.room:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    border-color: #c5a880;
+}
+
+/* Контейнер для зображення номерів для плавного ефекту наближення */
+.room-img-container {
+    overflow: hidden;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 220px;
+}
+
+.room img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.9);
+    transition: transform 0.5s ease; /* Плавність збільшення фото */
+}
+
+.room:hover img {
+    transform: scale(1.05); /* Легке збільшення фото всередині контейнера */
+}
+
+.room-info {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.room-info h2 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.room-info p {
+    color: #a0a0a0;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.room-info .price {
+    font-size: 1.3rem;
+    color: #c5a880;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   5. Секція СПА (SPA Section)
+   ========================================================================== */
+.spa-section {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    overflow: hidden;
+    animation: fadeInUp 0.8s ease forwards; /* Анімація появи СПА */
+}
+
+.spa-info {
+    padding: 40px;
+    flex: 1;
+}
+
+.spa-info h2 {
+    font-size: 2.2rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.spa-info p {
+    color: #a0a0a0;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.spa-image {
+    flex: 1;
+    height: 350px;
+    background: url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800') no-repeat center/cover;
+}
+
+/* ==========================================================================
+   6. Форма бронювання (Booking)
+   ========================================================================== */
+.booking {
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 40px 20px;
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.booking h2 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+.booking input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    background-color: #262626;
+    border: 1px solid #3a3a3a;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.booking input:focus {
+    border-color: #c5a880;
+}
+
+.booking input[readonly] {
+    background-color: #1f1f1f;
+    color: #c5a880;
+    font-weight: bold;
+}
+
+/* Кнопки замовлення та підтвердження */
+button {
+    width: 100%;
+    background-color: #c5a880;
+    color: #121212;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #b39368;
+}
+
+/* ==========================================================================
+   7. Контакти та підвал (Footer)
+   ========================================================================== */
+footer {
+    background-color: #0b0b0b;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid #2a2a2a;
+    margin-top: 80px;
+}
+
+footer h2 {
+    color: #fff;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #a0a0a0;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   8. Анімації та адаптивність (Keyframes & Media Queries)
+   ========================================================================== */
+
+/* Анімація плавного випливання карток */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Мобільні пристрої та планшети */
 @media (max-width: 768px) {
+    .spa-section {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .spa-image {
+        width: 100%;
+        height: 250px;
+        order: -1; /* Картинка стає зверху на смартфонах */
+    }
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+    .rooms {
+        margin: 30px auto;
+    }
     .nav-links {
         gap: 15px;
     }
